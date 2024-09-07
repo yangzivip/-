@@ -41,7 +41,7 @@
             超标均值：<input type="number" id="superValue" />
             现在均值：<input type="number" id="currentValue" />
             已过时间：<input type="number" id="elapsedTime" />
-            <button onclick="calculateDesulfurization()">计算</button>
+            <button onclick="calculateDesulfurization()"> <h2>计算</h2> </button>
             <p>本小时剩余时间均值不能超过：<span id="resultDesulfurization"></span></p>
         </div>
         
@@ -49,12 +49,12 @@
             <h2>治理效率计算器</h2>
             入口均值：<input type="number" id="inletValue" />
             出口均值：<input type="number" id="outletValue" />
-            <button onclick="calculateEfficiency()">计算</button>
+            <button onclick="calculateEfficiency()"> <h2>计算</h2> </button>
             <p>治理效率：<span id="resultEfficiency"></span></p>
         </div>
         <div class="footer">
             
-        <img src="http://148.135.76.152:85/i/2024/09/06/124146.jpeg" alt="IMG_1856_l2" />
+       代码已放在 : <a href="https://github.com/yangzivip/-" style="text-decoration:none" >GitHub仓库</a></p>
 
         </div>
         <div class="footer">
@@ -62,18 +62,12 @@
         </div>
     </div>
   
-        <div class="landing-buttons">
-  
-     <p><a class="landing-button" target="_blank" href="https://t.me/genbenjibuzhu/" style="text-decoration:none">
         
-     </a><p>
-
-</div>
 <footer class="footer">
     
 
 
-     <p>by : <a href="https://github.com/yangzivip/-" style="text-decoration:none" >GitHub</a></p>    
+     <p>by : <a href="https://chat.iosymbiandroid.com/" style="text-decoration:none" >聊天室</a></p>    
     <script>
         function calculateDesulfurization() {
             let superValue = parseFloat(document.getElementById('superValue').value);
