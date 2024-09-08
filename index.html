@@ -6,16 +6,20 @@
     <title>中唐特钢-炼铁脱硫</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
+
         }
         .container {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 5px solid #ccc;
             border-radius: 10px;
         }
-        h1, h2 {
+        h2 {color: #FF0000;
+            text-align: center;
+        }
+         h1 {color: #3300FF;
             text-align: center;
         }
         .footer {
@@ -26,9 +30,9 @@
             margin-bottom: 20px;
         }
         .calculator input, .calculator button {
-            margin: 5px 0;
-            padding: 5px;
-            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            width: 95%;
         }
     </style>
 </head>
@@ -42,7 +46,7 @@
             现在均值：<input type="number" id="currentValue" />
             已过时间：<input type="number" id="elapsedTime" />
             <button onclick="calculateDesulfurization()"> <h2>计算</h2> </button>
-            <p>本小时剩余时间均值不能超过：<span id="resultDesulfurization"></span></p>
+            <p>本小时剩余时间均值不能超过：<h2> <u> <span id="resultDesulfurization"> </span> </u> </h2></p>
         </div>
         
         <div class="calculator">
@@ -50,7 +54,7 @@
             入口均值：<input type="number" id="inletValue" />
             出口均值：<input type="number" id="outletValue" />
             <button onclick="calculateEfficiency()"> <h2>计算</h2> </button>
-            <p>治理效率：<span id="resultEfficiency"></span></p>
+            <p>治理效率：<h2> <u> <span id="resultEfficiency"></span> </u> </h2> </p>
         </div>
         <div class="footer">
             
