@@ -59,7 +59,55 @@
         <div class="footer">
             
        代码已放在 : <a href="https://github.com/yangzivip/-" style="text-decoration:none" >GitHub仓库</a></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Viewer</title>
+    <style>
+        /* 全屏蒙版样式 */
+        .overlay {
+            display: none; /* 默认隐藏 */
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: #ffffff;
+            z-index: 9999;
+            justify-content: center; 
+            align-items: center;
+        }
+        .overlay iframe {
+            width: 100%; 
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 打开 SVG 的按钮 -->
+    <button onclick="openSVG()">脱硫系统</button>
 
+ 
+
+    <!-- 全屏蒙版的内容 -->
+    <div id="overlay" class="overlay">
+        <iframe id="svgFrame"></iframe>
+        <button onclick="closeSVG()">返回</button>
+    </div>
+
+    <script>
+        function openSVG() {
+            document.getElementById('svgFrame').src = "path/to/your/image.svg";
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function closeSVG() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('svgFrame').src = '';
+        }
+    </script>
+</body>
+</html>
         </div>
         <div class="footer">
             <p>炼铁脱硫丙班</p>
