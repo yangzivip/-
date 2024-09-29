@@ -8,6 +8,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
 
+background-color: skyblue;
+
         }
         .container {
             max-width: 600px;
@@ -35,6 +37,70 @@
             width: 95%;
         }
     </style>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .announcement {
+            background-color: skyblue;
+            color: #000;
+            padding: 20px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        .announcement-inner {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            animation: scrolling 10s linear infinite;
+        }
+        @keyframes scrolling {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement" aria-live="polite">
+        <div class="announcement-inner">
+            珍爱生命，远离赌毒！十一快乐！
+        </div>
+    </div>
+    
+    </footer>
+</body>
+
+<script>
+    document.querySelector('.announcement').addEventListener('mouseover', function() {
+        document.querySelector('.announcement-inner').style.animationPlayState = 'paused';
+    });
+
+    document.querySelector('.announcement').addEventListener('mouseout', function() {
+        document.querySelector('.announcement-inner').style.animationPlayState = 'running';
+    });
+</script>
+   
+   <link rel="icon" href="path/to/your/icon.png" type="image/png">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+   <script async src="https://cdn.miaosdk.com/sdk.js?k=5AvzhJu5PgAt62EN" type="text/javascript"></script>
+<script>
+        window._ms_ = window._ms_ || [];
+        function meve(){_ms_.push(arguments);} 
+        meve("config", "5AvzhJu5PgAt62EN")
+</script>
 </head>
 <body>
     <div class="container">
@@ -58,7 +124,10 @@
         </div>
         <div class="footer">
             
-       代码已放在 : <a href="https://github.com/yangzivip/-" style="text-decoration:none" >GitHub仓库</a></p>
+       无聊→: <a href="https://nbclass.us.kg" style="text-decoration:none" >摸鱼</a></p>
+       源码→: <a href="https://github.com/yangzivip/-" style="text-decoration:none" >GitHub</a></p>
+       
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,29 +145,49 @@
             z-index: 9999;
             justify-content: center; 
             align-items: center;
+            flex-direction: column; /* 换行模式从列模式变为列模式 */
         }
         .overlay iframe {
             width: 100%; 
-            height: 100%;
+            height: 90%; /* 保留底部空间给返回按钮 */
+            border: none;
+        }
+        .overlay button {
+            width: 100%;
+            height: 100%; /* 按钮高度设置为100% */
+            background-color: #f0f0f0; /* 背景颜色 */
+            border: 5px solid #ccc; /* 边框 */
+            cursor: pointer; /* 鼠标样式 */
         }
     </style>
 </head>
 <body>
     <!-- 打开 SVG 的按钮 -->
-    <button onclick="openSVG()">脱硫系统</button>
-
- 
+    <h3><button onclick="openSVG()">脱硫系统图</button></h3>
 
     <!-- 全屏蒙版的内容 -->
     <div id="overlay" class="overlay">
         <iframe id="svgFrame"></iframe>
-        <button onclick="closeSVG()">返回</button>
+        <h2><button onclick="closeSVG()">返回</button></h2>
     </div>
 
     <script>
         function openSVG() {
             document.getElementById('svgFrame').src = "path/to/your/image.svg";
             document.getElementById('overlay').style.display = 'flex';
+
+            // 加载并调整iframe中的SVG
+            setTimeout(() => {
+                const iframe = document.getElementById('svgFrame');
+                const svgDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const svgRoot = svgDoc.querySelector('svg');
+
+                if (svgRoot) {
+                    svgRoot.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+                    svgRoot.setAttribute('width', '100%');
+                    svgRoot.setAttribute('height', '100%');
+                }
+            }, 200); // 延时确保iframe加载完毕
         }
 
         function closeSVG() {
@@ -108,15 +197,16 @@
     </script>
 </body>
 </html>
+
         </div>
         <div class="footer">
             <p>炼铁脱硫丙班</p>
         </div>
     </div>
-  
+ 
         
 <footer class="footer">
-    
+   
 
 
      <p>by : <a href="https://s.shutu.cn/w/1oo2j5" style="text-decoration:none" >脱硫笔记</a></p>    
